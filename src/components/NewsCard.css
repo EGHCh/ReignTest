@@ -1,0 +1,32 @@
+.card {
+  max-width: 500px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .card__body {
+  width: 90%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.43;
+}
+.card p {
+  font-size: 11px;
+}
+.card h2 {
+  font-size: 14px;
+}
+.card .card__fav {
+  width: 10%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__fav img {
+  cursor: pointer;
+}
