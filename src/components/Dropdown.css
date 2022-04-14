@@ -1,0 +1,11 @@
+.dropdown .btn {
+  border: 1px solid #2e2e2e;
+  width: 240px;
+  justify-content: start;
+}
+.dropdown .dropdown-menu {
+  width: 240px;
+}
+.dropdown .dropdown__item-logo {
+  width: 24px;
+}
