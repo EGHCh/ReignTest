@@ -3,14 +3,6 @@ import './Dropdown.css'
 
 export function Dropdown(props) {
   const {handleChoice} = props
-  // const [choice, setChoice] = useState(0);
-  // const handleChoice = (frameworkName) => setChoice(frameworkName)
-  // const handleChoice = (frameworkName) => {
-  //   const handleChoice = (frameworkName) => {
-  //     let target = frameworkName.target
-  //     console.log(target.text)
-  //   }
-  // }
   const [isActive, setActive] = useState(false);
 
   const handleDropdownShow = () => {

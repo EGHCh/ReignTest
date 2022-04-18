@@ -1,7 +1,9 @@
 #root .main {
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-  max-width: 1444px;
-  margin: 0 auto;
-  padding: 20px;
+ font-family: "Roboto", sans-serif;
+ max-width: 1444px;
+ margin: 0 auto;
+ padding: 20px;
+}
+#root * {
+ box-sizing: border-box;
 }

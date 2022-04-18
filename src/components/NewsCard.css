@@ -1,32 +1,47 @@
 .card {
-  max-width: 500px;
-  height: 90px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 10px;
-  overflow: hidden;
+ max-width: 500px;
+ height: 100px;
+ display: flex;
+ flex-direction: row;
+ border-radius: 10px;
+}
+.card:hover {
+ opacity: 0.5;
 }
 .card .card__body {
-  width: 90%;
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  line-height: 1.43;
+ width: 90%;
+ padding: 25px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ line-height: 1.43;
 }
 .card p {
-  font-size: 11px;
+ font-size: 13px;
 }
 .card h2 {
-  font-size: 14px;
+ font-size: 16px;
+ font-weight: bold;
+ cursor: pointer;
+}
+.card__body a {
+ text-decoration: none;
+ color: black;
 }
 .card .card__fav {
-  width: 10%;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ width: 20%;
+ background-color: #f0f0f0;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border-radius: 0px 10px 10px 0px;
 }
 .card__fav img {
-  cursor: pointer;
+ cursor: pointer;
+}
+@media (max-width: 768px) {
+ .card {
+  height: auto;
+  min-height: 100px;
+ }
 }

@@ -6,7 +6,6 @@ import {NewsDisplay} from "./NewsDisplay"
 export function Body() {
   return (
     <main className="main">
-      <DisplaySelector />
       <NewsDisplay/>
     </main>
   );
