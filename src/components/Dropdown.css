@@ -5,7 +5,17 @@
 }
 .dropdown .dropdown-menu {
   width: 240px;
+  display: none;
 }
 .dropdown .dropdown__item-logo {
   width: 24px;
+}
+
+.dropdown .show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+  transform: translate3d(0px, 39px, 0);
 }

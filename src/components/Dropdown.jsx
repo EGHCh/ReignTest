@@ -1,34 +1,50 @@
-import React from "react";
+import React, { useState } from "react";
 import './Dropdown.css'
 
-export function Dropdown() {
+export function Dropdown(props) {
+  const {handleChoice} = props
+  // const [choice, setChoice] = useState(0);
+  // const handleChoice = (frameworkName) => setChoice(frameworkName)
+  // const handleChoice = (frameworkName) => {
+  //   const handleChoice = (frameworkName) => {
+  //     let target = frameworkName.target
+  //     console.log(target.text)
+  //   }
+  // }
+  const [isActive, setActive] = useState(false);
+
+  const handleDropdownShow = () => {
+    setActive(!isActive);
+  }
+
   return (
     <div className="dropdown">
       <button
-        className="btn dropdown-toggle"
+        className={`btn dropdown-toggle`}
         type="button"
         id="dropdownMenuButton1"
         data-bs-toggle="dropdown"
-        aria-expanded="false"
+        aria-expanded={isActive ? "true" : "false"}
+        onClick={handleDropdownShow}
       >
         Select your news
       </button>
-      <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <ul className={`dropdown-menu ${isActive ? "show" : ""}`} data-popper-placement={isActive ? "bottom-start" : ""} aria-labelledby="dropdownMenuButton1">
         <li>
-          <a className="dropdown-item" href="#">
-            <img className="dropdown__item-logo" src={require('../assets/angular.png')}/>
+          <a className="dropdown-item" onClick={handleChoice} value='angular'>
+            <img className="dropdown__item-logo" src={require('../assets/angular.png')} />
             Angular
           </a>
         </li>
         <li>
-          <a className="dropdown-item" href="#">
-            <img className="dropdown__item-logo" src={require('../assets/react.png')}/>
+          <a className={`dropdown-item` } onClick={handleChoice}>
+            <img className="dropdown__item-logo" src={require('../assets/react.png')} />
             ReactJS
           </a>
         </li>
         <li>
-          <a className="dropdown-item" href="#">
-          <img className="dropdown__item-logo" src={require('../assets/vue.png')}/>
+          <a className="dropdown-item" onClick={handleChoice}>
+            <img className="dropdown__item-logo" src={require('../assets/vue.png')} />
             VueJS
           </a>
         </li>
